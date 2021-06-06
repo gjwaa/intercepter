@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    <script>
+        var j=1;
+        function addtr(){
+            var table =document.getElementById("tid");
+            var tr =document.createElement("tr");
+            var td = document.createElement("td");
+            for(var i=0;i<4;i++)
+            {
+                td=document.createElement("td");
+                td.innerHTML=j++;
+                tr.appendChild(td);
+            }
+            tr.appendChild(td);
+            table.appendChild(tr);
+        }
+ 
+    </script>
+    </head>
+    <body>
+        <input type="button" value="添加行" onclick="addtr()">
+ 
+        <table border="1" id="tid">
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+        </table>
+    </body>
+</html>
